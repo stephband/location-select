@@ -16,4 +16,4 @@ modules:
 	rm -rf build
 	# Run separate builds to package them as standalones
 	deno run --allow-read --allow-env --allow-net --allow-write --allow-run ../fn/deno/make-modules.js build/location-select.js module.js
-	deno run --allow-read --allow-env --allow-net --allow-write --allow-run ../fn/deno/make-modules.js build/ ./location-select.css ./location-select-shadow.css
+	deno run --allow-read --allow-env --allow-net --allow-write --allow-run ../fn/deno/make-modules.js build/location-select.css module.css
