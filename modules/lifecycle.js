@@ -10,7 +10,7 @@ export default {
     construct: function() {
         const children = this.children;
         let n = -1;
-        while (hrefs[++n]) {
+        while (children[++n]) {
             const option = children[n];
             const url    = new URL(option.value, window.location);
             if (url.href === window.location.href) {
