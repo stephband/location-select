@@ -24,12 +24,15 @@ export default {
     },
 
     connect: function() {
+        console.log('CONNECT');
         const children = this.children;
         let n = -1;
         while (children[++n]) {
             const option = children[n];
             const url    = new URL(option.value, window.location);
+            console.log(url.href, window.location.href);
             if (url.href === window.location.href) {
+                console.log('OPTION', option.value);
                 // Select option as <select> value (is this the best way to do it?)
                 this.value = option.value;
                 break;
