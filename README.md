@@ -1,2 +1,4 @@
-# location-select
-Customised built-in &lt;select is="location-select"> that takes url options
+
+<!--[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/@stephband/slide-show)-->
+
+# `<select is="location-select">`

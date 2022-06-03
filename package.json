@@ -1,0 +1,37 @@
+{
+    "title": "location-select",
+    "name": "@stephband/location-select",
+    "version": "0.1.0",
+    "description": "",
+    "keywords": ["location", "url", "link", "web", "component", "custom", "element"],
+    "author": {
+        "name": "Stephen Band",
+        "twitter": "@stephband",
+        "email": "stephband@cruncher.ch"
+    },
+    "card": {
+        "image": "https://stephen.band/location-select/card.jpg"
+    },
+    "homepage": "https://stephen.band/location-select/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/stephband/location-select.git"
+    },
+    "bugs": {
+        "url": "https://github.com/stephband/location-select/issues"
+    },
+    "funding": {
+        "github": "https://github.com/sponsors/stephband"
+    },
+    "license" : "GPL-3.0",
+    "type": "module",
+    "browser": "./build/location-select.js",
+    "files": [
+        "build/*",
+        "docs/docs.css",
+        "docs/docs.js",
+        "index.html",
+        "README.md",
+        "LICENSE"
+    ]
+}
