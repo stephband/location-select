@@ -1,5 +1,4 @@
 
-import create   from '../../dom/modules/create.js';
 import events   from '../../dom/modules/events.js';
 
 function isHashRef(ref) {
