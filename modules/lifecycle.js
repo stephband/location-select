@@ -1,5 +1,4 @@
 
-import get      from '../../fn/modules/get.js';
 import create   from '../../dom/modules/create.js';
 import events   from '../../dom/modules/events.js';
 
@@ -8,16 +7,11 @@ function isHashRef(ref) {
 }
 
 export default {
-    construct: function(shadow) {
-        // Shadow DOM
-        const slot = create('slot');
-        shadow.append(slot);
-
-        // Events
+    construct: function() {
         events('change', this)
-        .map(get('value'))
+        .map((e) => e.target.value)
         // Ignore links for empty spaces
-        .filter((value) => !!value)
+        .filter((href) => !!href)
         .each((href) => {
             if (isHashRef(href)) {
                 const id = ref.slice(1);

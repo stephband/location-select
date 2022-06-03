@@ -18,6 +18,12 @@
         <p class="@1-no-wrap">The accessible, scrollable, styleable, horizontal carousel custom element. <br class="@1-shown"/>No dependencies, about <code>12kB</code> minified and gzipped.</p>
     </header>
 
+    <select is="location-select">
+        <option value="/">Home</option>
+        <option value="/slide-show">slide-show</option>
+        <option value="/location-select">location-select</option>
+    </select>
+
     <section class="x1 3x @1-4x @2-x2 x-stretch y-start">
         ${ include('./docs/templates/content.literal', comments("./module.js")) }
     </section>
