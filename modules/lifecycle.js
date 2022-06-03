@@ -8,6 +8,22 @@ function isHashRef(ref) {
 
 export default {
     construct: function() {
+        events('change', this)
+        .map((e) => e.target.value)
+        // Ignore links for empty spaces
+        .filter((href) => !!href)
+        .each((href) => {
+            if (isHashRef(href)) {
+                const id = href.slice(1);
+                window.location.hash = id;
+            }
+            else {
+                window.location = href;
+            }
+        });
+    },
+
+    connect: function() {
         const children = this.children;
         let n = -1;
         while (children[++n]) {
@@ -19,19 +35,5 @@ export default {
                 break;
             }
         }
-
-        events('change', this)
-        .map((e) => e.target.value)
-        // Ignore links for empty spaces
-        .filter((href) => !!href)
-        .each((href) => {
-            if (isHashRef(href)) {
-                const id = ref.slice(1);
-                window.location.hash = id;
-            }
-            else {
-                window.location = href;
-            }
-        });
     }
 };

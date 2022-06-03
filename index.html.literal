@@ -22,7 +22,11 @@
         <option value="/">Home</option>
         <option value="/slide-show">slide-show</option>
         <option value="/location-select">location-select</option>
-    </select>cd ../
+        <option value="?param=1">?param=1</option>
+        <option value="?param=2">?param=2</option>
+        <option value="#1">#1</option>
+        <option value="#2">#2</option>
+    </select>
 
     <section class="x1 3x @1-4x @2-x2 x-stretch y-start">
         ${ include('./docs/templates/content.literal', comments("./module.js")) }
@@ -47,7 +51,7 @@
 
     <script type="module">
         import './docs/docs.js';
-        import './build/location-select.js';
+        import './module.js';
 
         // Log events
         /*document.body.addEventListener('slide-active', (e) =>
