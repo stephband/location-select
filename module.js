@@ -8,8 +8,8 @@ Download the latest release:
 Include the JS and CSS files:
 
 ```html
-<link rel="stylesheet" href="./build/location-select.css" />
-<script type="module" src="./build/location-select.js"></script>
+<link rel="stylesheet" href="./location-select.css" />
+<script type="module" src="./location-select.js"></script>
 ```
 **/
 

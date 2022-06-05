@@ -9,7 +9,7 @@
     </script>
 
     <link rel="stylesheet" href="./docs/docs.css">
-    <link rel="stylesheet" href="./build/location-select.css">
+    <link rel="stylesheet" href="./location-select.css">
 
     <style>
     [is="location-select"] {
@@ -56,6 +56,6 @@
 
     <script type="module">
         import './docs/docs.js';
-        import './build/location-select.js';
+        import './location-select.js';
     </script>
 </body>

@@ -25,7 +25,7 @@
     },
     "license" : "GPL-3.0",
     "type": "module",
-    "browser": "./build/location-select.js",
+    "browser": "./location-select.js",
     "files": [
         "build/*",
         "docs/docs.css",
