@@ -28,7 +28,7 @@
         <select is="location-select">
             <option value="/">Home</option>
             <option value="../location-select/">Documentation</option>
-            <option value="../location-select/test.html">Tests</option>
+            <option value="../location-select/test.html">Test</option>
             <option value="?param=1">?param=1</option>
             <option value="?param=2">?param=2</option>
             <option value="#1">#1</option>

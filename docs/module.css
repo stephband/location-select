@@ -85,7 +85,7 @@ code {
 
 /* Specific to <slide-show> header */
 
-.docs-text-01 { font-size: 1.8vw; white-space: nowrap; }
+.docs-text-01 { font-size: 6vw; white-space: nowrap; }
 
 @media (min-width: 50em) {
     .docs-text-01 { font-size: 4.66vw; }
