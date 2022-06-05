@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Stephen Band" />
+    <meta name="description" content="Test for location-select." />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>location-select</title>
+
+    <script title="load">
+        document.documentElement.className += ' js loading';
+        // window.addEventListener('DOMContentLoaded', () => document.documentElement.classList.remove('content-loading'));
+        // Wait for other load handlers to run first - Bolt does a few things on
+        // load (eg. targetable scrolls) and we want them to run before the loading
+        // class is removed
+        window.addEventListener('load', () => window.requestAnimationFrame(() => document.documentElement.classList.remove('loading')));
+    </script>
+
+    <script title="debug">
+        window.DEBUG = true;
+    </script>
+
+    <link rel="stylesheet" href="./docs/docs.css">
+    <link rel="stylesheet" href="./module.css">
+
+    <style>
+    [is="location-select"] {
+        font-size: 1rem;
+    }
+    </style>
+</head>
+
+<body class="docs-grid grid 3x-grid @1-6x-grid @2-9x-grid y-start-grid">
+    <div class="x1 3x @1-4x @2-x2 x-stretch y-start">
+        <select is="location-select">
+            <option value="/">Home</option>
+            <option value="./index.html">Documentation</option>
+            <option value="./test.html">Test</option>
+            <option value="?param=1">?param=1</option>
+            <option value="?param=2">?param=2</option>
+            <option value="#1">#1</option>
+            <option value="#2">#2</option>
+        </select>
+    </div>
+
+    <script type="module">
+        import './docs/docs.js';
+        import './module.js';
+    </script>
+</body>
