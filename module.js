@@ -31,6 +31,14 @@ looks something like this:
 Where the `location-select` contains an href that matches the current URL, that
 option is selected.
 
+#### Stylesheet
+
+The `location-select` is deliberately left unstyled. Style it as you would any
+other native `<select>`. The included stylesheet simply hides the
+`location-select` with `display: none` until it is initialised. This makes
+sense as it relies on JavaScript, so it is not interactive unless JavaScript
+is available.
+
 #### Browser support
 
 Safari does not support customised built-in elements. Support is roughly
