@@ -47,7 +47,7 @@
 
 <body class="docs-grid grid 3x-grid @1-6x-grid @2-9x-grid y-start-grid">
     <header class="x1 3x @1-x1 @1-4x @2-x2">
-        <h1 class="docs-text-01"><span class="tag-brace">&lt;</span>select is="location-select"<span class="tag-brace">&gt;</span><span style="font-size: 0.1666667em; font-family: 'MartianMono'; font-variation-settings: 'wght' 400, 'wdth' 96; letter-spacing: -0.125em;">0.1.0</span>
+        <h1 class="docs-text-01"><span class="tag-brace">&lt;</span>select is="location-select"<span class="tag-brace">&gt;</span><span style="font-size: 0.1666667em; font-family: 'MartianMono'; font-variation-settings: 'wght' 400, 'wdth' 96; letter-spacing: -0.125em;">0.2.0</span>
 </h1>
         <p class="@1-no-wrap">The customised built-in <code>&lt;select&gt;</code> element that acts as a navigation menu.</p>
     </header>
@@ -56,7 +56,7 @@
         <select is="location-select">
             <option value="/">Home</option>
             <option value="./">Documentation</option>
-            <option value="./test.html">Tests</option>
+            <option value="./test.html">Test</option>
             <option value="?param=1">?param=1</option>
             <option value="?param=2">?param=2</option>
             <option value="#1">#1</option>
@@ -90,7 +90,8 @@ looks something like this:</p>
    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Hash<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">></span></span></code></pre>
 <p>Where the <code>location-select</code> contains an href that matches the current URL, that
-option is selected.</p>
+option is selected. And it is updated when the URL changes and a <code>popstate</code>
+event is emitted.</p>
 <h4 id="stylesheet">Stylesheet</h4>
 <p>The <code>location-select</code> is deliberately left unstyled. Style it as you would any
 other native <code>&lt;select&gt;</code> element. The included stylesheet simply hides the

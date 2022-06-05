@@ -1,10 +1,6 @@
-/* location-select 
-   0.1.0
+/* location-select
+   0.2.0
    By Stephen Band
-<<<<<<< HEAD:location-select.css
-   Built 2022-06-05 03:02 */
-=======
-   Built 2022-06-05 14:44 */
->>>>>>> 9819fa389b9d972c9d677bee15e663b5e05f718c:build/location-select.css
+   Built 2022-06-05 15:07 */
 
 [is=location-select]{display:none}[is=location-select]:defined{display:block}
