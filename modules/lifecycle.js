@@ -6,12 +6,32 @@ function isHashRef(ref) {
     return /^#\S+$/.test(ref);
 }
 
+function updateSelected(select) {
+    const children = select.children;
+    let n = -1;
+    while (children[++n]) {
+        const option = children[n];
+        // Ignore empty option values
+        if (!option.value) { continue; }
+
+        const url    = new URL(option.value, window.location);
+        if (url.href === window.location.href) {
+            // Select option as <select> value (is this the best way to do it?)
+            select.value = option.value;
+            break;
+        }
+    }
+}
+
 export default {
     construct: function() {
+        // Listen to changes to select
         events('change', this)
+        // Get select value
         .map((e) => e.target.value)
-        // Ignore empty option values
+        // Ignore empty hrefs
         .filter((href) => !!href)
+        // Update location
         .each((href) => {
             if (isHashRef(href)) {
                 const id = href.slice(1);
@@ -21,22 +41,13 @@ export default {
                 window.location = href;
             }
         });
+
+        // Track changes to location and update selected
+        events('popstate', window).each(() => updateSelected(this));
     },
 
     connect: function() {
-        const children = this.children;
-        let n = -1;
-        while (children[++n]) {
-            const option = children[n];
-            // Ignore empty option values
-            if (!option.value) { continue; }
-
-            const url    = new URL(option.value, window.location);
-            if (url.href === window.location.href) {
-                // Select option as <select> value (is this the best way to do it?)
-                this.value = option.value;
-                break;
-            }
-        }
+        // Update selected option
+        updateSelected(this);
     }
 };
