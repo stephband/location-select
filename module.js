@@ -29,7 +29,8 @@ looks something like this:
 ```
 
 Where the `location-select` contains an href that matches the current URL, that
-option is selected.
+option is selected. And it is updated when the URL changes and a `popstate`
+event is emitted.
 
 #### Stylesheet
 
