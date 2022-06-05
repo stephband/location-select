@@ -35,10 +35,9 @@ event is emitted.
 #### Stylesheet
 
 The `location-select` is deliberately left unstyled. Style it as you would any
-other native `<select>` element. The included stylesheet simply hides the
+other `<select>` element. The included stylesheet simply hides the
 `location-select` with `display: none` until it is initialised. This makes
-sense as it relies on JavaScript, so it is not interactive unless JavaScript
-is available.
+sense as it relies on JavaScript, so it is not interactive until initialisation.
 
 #### Browser support
 
