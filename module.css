@@ -1,8 +1,0 @@
-
-[is="location-select"] {
-    display: none;
-}
-
-[is="location-select"]:defined {
-    display: block;
-}
