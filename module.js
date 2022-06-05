@@ -49,8 +49,6 @@ instantiated by selecting them at the time `location-select.js` is run.
 import element   from '../dom/modules/element.js';
 import lifecycle from './modules/lifecycle.js';
 
-const stylesheet = import.meta.url.replace(/\/[^\/]*\.js/, '/location-select-shadow.css');
-
 export default element('<select is="location-select">', lifecycle);
 
 // Log registration to console
