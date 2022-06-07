@@ -42,8 +42,10 @@ export default {
             }
         });
 
-        // Track changes to location and update selected
-        events('popstate', window).each(() => updateSelected(this));
+        // Track changes to location
+        events('popstate', window)
+        // And update selected option
+        .each(() => updateSelected(this));
     },
 
     connect: function() {
